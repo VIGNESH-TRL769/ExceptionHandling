@@ -89,20 +89,16 @@ class DatabaseConnection {
 
             }
             catch (RuntimeException e) {
-                String value = "Please Enter Valid Inputs:" + e;
-                LOGGER.info(value);
+                String value1 = "Please Enter Valid Inputs:" + e;
+                LOGGER.info(value1);
                 input.nextLine();
             }
             catch (Exception e) {
-                String value = "Please Enter Valid Inputs:" + e;
-                LOGGER.info(value);
+                String value2 = "Please Enter Valid Inputs:" + e;
+                LOGGER.info(value2);
                 input.nextLine();
             }
-            catch (Throwable e) {
-                String value = "Please Enter Valid Inputs:" + e;
-                LOGGER.info(value);
-                input.nextLine();
-            }
+
         }
 
     }
