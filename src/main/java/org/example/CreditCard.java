@@ -62,13 +62,13 @@ public class CreditCard
         }
         catch (RuntimeException e)
         {
-            String value2="Please Enter Valid Inputs:"+e;
+            String value2="Please enter valid inputs:"+e;
             LOGGER.info(value2);
             input.nextLine();
         }
         catch (Exception e)
         {
-            String value3="Please Enter Valid Inputs:"+e;
+            String value3="Please Enter Valid Input:"+e;
             LOGGER.info(value3);
             input.nextLine();
         }
