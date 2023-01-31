@@ -32,17 +32,17 @@ public class CreditCard
     {
         Scanner input=new Scanner(System.in);
         try {
-            LOGGER.info("Enetr the HolderName:");
+            LOGGER.info("Eneter the HolderName:");
             String name = input.nextLine();
-            LOGGER.info("Enetr the CardNumber:");
+            LOGGER.info("Eneter the CardNumber:");
             long cardNumber = input.nextLong();
-            LOGGER.info("Enetr the ExpirationDate:");
+            LOGGER.info("Eneter the ExpirationDate:");
             String expirationDate = input.next();
-            CreditCardClone CreditCardClone = new CreditCardClone(name, cardNumber, expirationDate);
-            CreditCardClone cloneCreditCardClone = new CreditCardClone(CreditCardClone);
-            LOGGER.info("Enetr the NewCardNumber:");
+            CreditCardClone creditCardClone = new CreditCardClone(name, cardNumber, expirationDate);
+            CreditCardClone cloneCreditCardClone = new CreditCardClone(creditCardClone);
+            LOGGER.info("Eneter the NewCardNumber:");
             long newCardNumber = input.nextLong();
-            String checkNumber = String.valueOf(CreditCardClone.checkNumber(newCardNumber));
+            String checkNumber = String.valueOf(creditCardClone.checkNumber(newCardNumber));
             if (checkNumber.equals("true"))
                 LOGGER.info("Cardnumber is equal");
             else {
@@ -56,26 +56,20 @@ public class CreditCard
         }
         catch (InputMismatchException e)
         {
-            String value="Please Enter Valid Inputs:"+e;
-            LOGGER.info(value);
+            String value1="Please Enter Valid Inputs:"+e;
+            LOGGER.info(value1);
             input.nextLine();
         }
         catch (RuntimeException e)
         {
-            String value="Please Enter Valid Inputs:"+e;
-            LOGGER.info(value);
+            String value2="Please Enter Valid Inputs:"+e;
+            LOGGER.info(value2);
             input.nextLine();
         }
         catch (Exception e)
         {
-            String value="Please Enter Valid Inputs:"+e;
-            LOGGER.info(value);
-            input.nextLine();
-        }
-        catch (Throwable e)
-        {
-            String value="Please Enter Valid Numbers:"+e;
-            LOGGER.info(value);
+            String value3="Please Enter Valid Inputs:"+e;
+            LOGGER.info(value3);
             input.nextLine();
         }
         finally {
