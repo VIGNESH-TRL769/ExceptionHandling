@@ -105,7 +105,7 @@ public class StudentGrade {
                 }
 
             }
-            catch (Throwable e) {
+            catch (Exception e) {
                 String value = "Please Enter Valid Inputs:" + e;
                 LOGGER.info(value);
                 input.nextLine();
